@@ -1,0 +1,16 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "prisma-d1-example"
+main = "src/index.ts"
+compatibility_date = "2024-11-12"
+compatibility_flags = ["nodejs_compat"]
+
+# Workers Logs
+# Docs: https://developers.cloudflare.com/workers/observability/logs/workers-logs/
+# Configuration: https://developers.cloudflare.com/workers/observability/logs/workers-logs/#enable-workers-logs
+[observability]
+enabled = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "prisma-demo-db"
+database_id = "c535e447-f124-419f-8dc5-d3d7e2526ef9"
